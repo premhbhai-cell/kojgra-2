@@ -1,0 +1,33 @@
+/* Custom CSS (Tailwind CDN handles utility classes). */
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{overflow-x:hidden;font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;color:#1c2b22}
+h1,h2,h3,.font-serif{font-family:Georgia,"Times New Roman",serif}
+.container-k{width:100%;max-width:1280px;margin-inline:auto;padding-inline:1rem}
+.wordmark{font-family:Georgia,serif;letter-spacing:.18em;font-weight:700}
+.pb-mobilebar{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+@media(min-width:768px){.pb-mobilebar{padding-bottom:0}}
+.shadow-float{box-shadow:0 6px 18px -6px rgba(28,43,34,.35)}
+.line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card{box-shadow:0 1px 3px rgba(28,43,34,.1),0 6px 16px -8px rgba(28,43,34,.16);transition:transform .25s,box-shadow .25s,border-color .25s}
+.card img{transition:transform .45s}
+@media(hover:hover){.card:hover{transform:translateY(-4px);border-color:#8ccb6c;box-shadow:0 14px 30px -12px rgba(84,178,38,.5),0 4px 10px -4px rgba(28,43,34,.18)}.card.group:hover img{transform:scale(1.06)}}
+.card:active{transform:scale(.985)}
+.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block;flex-shrink:0}
+.faq details{border-bottom:1px solid #e3ebe5;padding:.9rem 0}.faq details:last-child{border:0}
+.faq summary{cursor:pointer;font-weight:600;font-size:.875rem;list-style:none}.faq p{margin-top:.5rem;font-size:.875rem;color:#5f7066}
+#toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;background:#1c2b22;color:#fff;padding:10px 18px;border-radius:10px;font-size:14px;display:none}
+
+/* loader */
+.kloader{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#fff;animation:kfade .3s}
+.kl-ring{position:relative;width:96px;height:96px;display:grid;place-items:center}
+.kl-ring::before{content:"";position:absolute;inset:0;border-radius:50%;border:4px solid #EEF8E9;border-top-color:#54B226;border-right-color:#54B226;animation:kspin .9s linear infinite}
+.kl-ring img{width:56px;height:56px;object-fit:contain;border-radius:12px;animation:kpulse 1.4s ease-in-out infinite}
+.kl-dots{display:flex;gap:8px}.kl-dots i{width:10px;height:10px;border-radius:50%;background:#f5d547;animation:kbounce .9s ease-in-out infinite}
+.kl-dots i:nth-child(2){animation-delay:.15s;background:#54B226}.kl-dots i:nth-child(3){animation-delay:.3s}
+.kloader p{font-size:14px;font-weight:600;color:#5f7066;letter-spacing:.03em}
+@keyframes kspin{to{transform:rotate(360deg)}}@keyframes kpulse{50%{transform:scale(.88);opacity:.75}}
+@keyframes kbounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes kfade{from{opacity:0}}
+/* reviews carousel */
+.rv-track{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;-webkit-overflow-scrolling:touch}
+.rv-card{flex:0 0 280px;scroll-snap-align:start}
+@media(min-width:768px){.rv-card{flex-basis:320px}}
